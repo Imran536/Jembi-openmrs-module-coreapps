@@ -1,0 +1,19 @@
+
+ <div style="display: block; overflow: hidden; padding-right: 5px; padding-bottom: 2px">
+     Vital Signs: <select ng-model='$ctrl.selectedId' ng-change='$ctrl.selected()'>
+     	<option ng-repeat="obs in $ctrl.conceptDict" value="{{obs[0]}}">{{obs[1]}}</option>
+     </select>
+ </div>
+    
+<div ng-if="$ctrl.series.length > 0">
+    <div style="padding-bottom: 10px">
+        <strong>
+            {{$ctrl.concept.display}}
+        </strong>
+    </div>
+    <canvas class="chart chart-line" chart-data="$ctrl.data" chart-labels="$ctrl.labels"
+            chart-series="$ctrl.series" chart-options="$ctrl.options"></canvas>
+</div>
+<div ng-if="$ctrl.series.length === 0">
+    None
+</div>

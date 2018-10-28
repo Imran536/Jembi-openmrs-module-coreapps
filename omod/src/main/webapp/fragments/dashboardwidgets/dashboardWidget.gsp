@@ -2,6 +2,7 @@
     ui.includeJavascript("coreapps", "web/coreapps.vendor.js")
     ui.includeJavascript("coreapps", "web/coreapps.dashboardwidgets.js")
     ui.includeJavascript("uicommons", "handlebars/handlebars.js")
+    
 %>
 <div id="coreapps-${config.id}" class="info-section openmrs-contrib-dashboardwidgets">
     <div class="info-header">

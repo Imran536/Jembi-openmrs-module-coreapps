@@ -1,5 +1,4 @@
-[
-  {
+[ {
     "id": "coreapps.latestObsForConceptList",
     "instanceOf": "coreapps.template.dashboardWidget",
     "description": "coreapps.latestObsForConceptList.app.description",
@@ -23,6 +22,33 @@
       }
     ]
   },
+  {
+   "id": "coreapps.testresults71",
+   "instanceOf": "coreapps.template.dashboardWidget",
+   "description": "Test description of results",
+   "order": 10,
+   "config": {
+     "widget": "testresults71",
+     "icon": "icon-user-md",
+     "label": "TEST RESULTS",
+     "concepts":"00463596-0765-4d57-8433-463aeec1f441,4b74a157-01eb-4211-abc4-bf6b54ec24b8,2a508d31-7561-45a0-af40-2700a72037a1,b041a326-3e9a-4768-b601-6e9485d819de,00463632-0765-4d57-8433-463aeec1f441,4b830438-a53b-4c10-bf5d-3d293cad7853,0baae623-a1ad-4449-bac0-cf5aaa931485,000190b0-7cbd-400e-8441-b1751c43c29c,bc0f0544-98db-4e1e-b36c-e0094b9a265c,6eac5d6b-3856-4011-9b27-1a31783b8075,eb4af9c5-1398-4667-b905-a09d4a7cd8be,51954205-f1e8-4aa7-9aad-0c7a9dc82f75,b3777f51-8452-4370-b6b8-ed80ed1a5102,5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "concept_names":"HbA1c,ECG,Echo,Cholestrol,Creatinine,Urine Analysis,Urine microalbumin,ALT,K,TSH,INR,LDL,Other, Systolic BP, Diastolic BP",
+     "conceptId": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "maxResults": "100",
+     "maxAge": "1y"
+   },
+   "extensions": [
+     {
+       "id": "${project.parent.groupId}.${project.parent.artifactId}.mostRecentVitals.clinicianDashboardFirstColumn",
+       "appId": "coreapps.testresults71",
+       "extensionPointId": "patientDashboard.firstColumnFragments",
+       "extensionParams": {
+         "provider": "${project.parent.artifactId}",
+         "fragment": "dashboardwidgets/dashboardWidget"
+       }
+     }
+   ]
+ },
   {
     "id": "coreapps.obsAcrossEncounters",
     "instanceOf": "coreapps.template.dashboardWidget",

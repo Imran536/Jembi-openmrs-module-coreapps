@@ -1,19 +1,51 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.5/chartjs-plugin-annotation.min.js">
+</script>
 
- <div style="display: block; overflow: hidden; padding-right: 5px; padding-bottom: 2px">
-     Vital Signs: <select ng-model='$ctrl.selectedId' ng-change='$ctrl.selected()'>
-     	<option ng-repeat="obs in $ctrl.conceptDict" value="{{obs[0]}}">{{obs[1]}}</option>
-     </select>
- </div>
-    
-<div ng-if="$ctrl.series.length > 0">
+<style>
+td{max-width:0px;}
+select{height:unset;}
+</style>
+
+<table>
+	<tr>
+		<td>Vital Signs</td>
+		<td>
+		<select ng-model='$ctrl.selectedId' ng-change='$ctrl.selected()'>
+     		<option ng-repeat="obs in $ctrl.conceptDict" value="{{obs[0]}}">{{obs[1]}}</option>
+     	</select>
+     	
+     	<select ng-model="$ctrl.multiArray" id="multiSelect" multiple="multiple">
+     		<option ng-repeat="obs in $ctrl.conceptDict" value="{{obs[0]}}">{{obs[1]}}</option>
+     	</select>
+     	<input type="text" ng-model="$ctrl.multiArray"></input>
+     	<input type="button" ng-click="$ctrl.clicked()">GO</input>
+     	</td>
+     
+	</tr>
+		<td>Time Period</td>
+		<td>
+			<select ng-model='$ctrl.daysAgo' ng-change='$ctrl.onTimePeriodSelected();'>
+		 		<option value=7>Last week</option>
+		 		<option value=14>Last two weeks</option>
+				<option value=90>Last three months</option>
+ 			</select>
+		</td>
+	<tr>
+	</tr>
+</table>
+
+	<br/>
+
+<div ng-if="$ctrl.labels.length > 0">
     <div style="padding-bottom: 10px">
         <strong>
             {{$ctrl.concept.display}}
         </strong>
     </div>
-    <canvas class="chart chart-line" chart-data="$ctrl.data" chart-labels="$ctrl.labels"
+    <canvas id="cId" class="chart chart-line" chart-data="$ctrl.data" chart-labels="$ctrl.labels"
             chart-series="$ctrl.series" chart-options="$ctrl.options"></canvas>
 </div>
-<div ng-if="$ctrl.series.length === 0">
+              
+<div ng-if="$ctrl.labels.length === 0">
     None
 </div>

@@ -5,7 +5,6 @@ export let TestResults71Component = {
     template,
     controller: TestResults71Controller,
     selector: 'testresults71',
-	scope: {},
     bindings: {
         config: '<'
     }

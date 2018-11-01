@@ -1,5 +1,4 @@
 import angular from 'angular';
-
 import DataIntegrityViolations from './dataintegrityviolations';
 import LatestObsForConceptList from './latestobsforconceptlist';
 import ObsAcrossEncounters from './obsacrossencounters';
@@ -12,7 +11,7 @@ import VisitByEncounterType from './visitbyencountertype';
 import TestResults71 from './testresults71'
 
 export default angular.module("openmrs-contrib-dashboardwidgets", [ DataIntegrityViolations, LatestObsForConceptList,
-    ObsAcrossEncounters, ObsGraph, Programs, ProgramStatistics, ProgramStatus, Relationships, TestResults71, VisitByEncounterType]).name;
+    ObsAcrossEncounters, ObsGraph, Programs, ProgramStatistics, ProgramStatus, Relationships, VisitByEncounterType,TestResults71]).name;
 
 
 angular.element(document).ready(function() {

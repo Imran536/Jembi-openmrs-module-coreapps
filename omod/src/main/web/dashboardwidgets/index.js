@@ -8,10 +8,10 @@ import ProgramStatistics from './programstatistics';
 import ProgramStatus from './programstatus';
 import Relationships from './relationships';
 import VisitByEncounterType from './visitbyencountertype';
-import TestResults71 from './testresults71'
+import ResultsTrendView from './resultstrendview'
 
 export default angular.module("openmrs-contrib-dashboardwidgets", [ DataIntegrityViolations, LatestObsForConceptList,
-    ObsAcrossEncounters, ObsGraph, Programs, ProgramStatistics, ProgramStatus, Relationships, VisitByEncounterType,TestResults71]).name;
+    ObsAcrossEncounters, ObsGraph, Programs, ProgramStatistics, ProgramStatus, Relationships, VisitByEncounterType,ResultsTrendView]).name;
 
 
 angular.element(document).ready(function() {

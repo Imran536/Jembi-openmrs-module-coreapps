@@ -53,6 +53,13 @@ max-width:200px;
 
 <br/>
 
+<ui-select multiple ng-model="$ctrl.vitalsSelected" theme="bootstrap" ng-disabled="ctrl.disabled" close-on-select="false" style="width: 300px;" title="Choose a color">
+    <ui-select-match placeholder="Select colors..."></ui-select-match>
+    <ui-select-choices repeat="obs in $ctrl.labConceptsArray">
+      {{color}}
+    </ui-select-choices>
+  </ui-select>
+  
 <div style="padding-bottom: 10px">
         <strong>
         	Vitals Chart

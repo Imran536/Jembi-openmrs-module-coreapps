@@ -160,7 +160,10 @@ export default class ResultsTrendViewController{
 	                            if(this.daysAgo == -1 || this.widgetsCommons.dateToDaysAgo(obs.obsDatetime) <= parseInt(this.daysAgo)){
 		                        	// Add obs data for chart display
 		                            var date = this.$filter('date')(new Date(obs.obsDatetime), this.config.dateFormat);
-		                            if(this.vitalChartLabels.indexOf(date) == -1){
+		                            /*if(this.vitalChartLabels.indexOf(date) == -1){
+		                            	this.vitalChartLabels.unshift(date);
+		                            }*/
+		                            if( i === 0){
 		                            	this.vitalChartLabels.unshift(date);
 		                            }
 		                            this.vitalChartData[i].unshift(obs.value);
@@ -224,7 +227,10 @@ export default class ResultsTrendViewController{
 	                            if(this.daysAgo == -1 || this.widgetsCommons.dateToDaysAgo(obs.obsDatetime) <= parseInt(this.daysAgo)){
 		                        	// Add obs data for chart display
 		                            var date = this.$filter('date')(new Date(obs.obsDatetime), this.config.dateFormat);
-		                            if(this.vitalChartLabels.indexOf(date) == -1){
+		                            /*if(this.vitalChartLabels.indexOf(date) == -1){
+		                            	this.vitalChartLabels.unshift(date);
+		                            }*/
+		                            if(i === 0){
 		                            	this.vitalChartLabels.unshift(date);
 		                            }
 		                            this.vitalChartData[i].unshift(obs.value);

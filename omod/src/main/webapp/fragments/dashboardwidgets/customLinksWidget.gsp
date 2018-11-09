@@ -1,3 +1,4 @@
+
 <div id="coreapps-customLinks" class="info-section">
     <div class="info-header">
         <i class="${config.icon}"></i>

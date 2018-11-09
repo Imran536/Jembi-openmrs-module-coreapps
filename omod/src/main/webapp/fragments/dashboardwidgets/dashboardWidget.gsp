@@ -4,6 +4,7 @@
     ui.includeJavascript("uicommons", "handlebars/handlebars.js")
     
 %>
+
 <div id="coreapps-${config.id}" class="info-section openmrs-contrib-dashboardwidgets">
     <div class="info-header">
         <i class="${config.icon}"></i>

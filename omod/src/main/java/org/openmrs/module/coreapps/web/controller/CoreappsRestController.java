@@ -15,13 +15,13 @@ package org.openmrs.module.coreapps.web.controller;
 
 import org.openmrs.module.webservices.rest.web.RestConstants;
 import org.openmrs.module.webservices.rest.web.v1_0.controller.MainResourceController;
+import org.openmrs.ui.framework.fragment.FragmentConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/rest/" + RestConstants.VERSION_1 + CoreappsRestController.COREAPPS_NAMESPACE)
 public class CoreappsRestController extends MainResourceController {
-
     public static final String COREAPPS_NAMESPACE = "/coreapps";
 
     /**

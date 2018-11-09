@@ -136,6 +136,7 @@ export default class ProgramsController {
 
    gotoProgramDashboard(programUuid) {
 
+	   console.log(this.dashboardPage);
         if (!programUuid) {
             programUuid = this.input.program
         }
